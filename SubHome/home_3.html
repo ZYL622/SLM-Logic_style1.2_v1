@@ -1,0 +1,219 @@
+<!-- This is home page for Exercise 3 -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Give a specific title for this page  -->
+    <title>Exercise 3</title>
+
+    <!-- Apply the defined styles  -->
+    <link rel="stylesheet" href="../style setting/icons.css" />
+    <link rel="stylesheet" href="../style setting/navbar.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      crossorigin="anonymous"
+    ></script>
+
+    <!--Below Codes: Make the math equations to show.
+        DONOT delete them if you want to show math stuff-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+
+  <body>
+    <nav>
+      <!-- These are navbars.  
+           To change the contents, please go for the corresponding file -->
+      <ul class="menu">
+        <!-- Go to Home page of this template -->
+        <li class="logo">
+          <a href="../index.html">Self-learning Module - Logic</a>
+        </li>
+
+        <!-- Go to Home page of this Exercise -->
+        <li class="item_on">
+          <a href="home_3.html" class="nav_item">Exercise 3</a>
+        </li>
+
+        <!-- Go to the full solution of this Exercise -->
+        <li class="item button secondary">
+          <a href="../Solution/solution_3.html" class="nav_item"
+            >Full Solution</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <h1>
+      Exercise 3: Given $A \rightarrow (C \rightarrow B)$, $C$.
+
+      <br />
+
+      Derive $A \rightarrow B$
+    </h1>
+
+    <!-- The below 2 buttons are used to control all hints or check buttons  -->
+    <button
+      id="but_0_1"
+      class="shbt_top"
+      onclick="HideShow('but_0_1', 'unsee_hint')"
+    >
+      Show Hints
+    </button>
+
+    <button
+      id="but_0_2"
+      class="shbt_top"
+      onclick="HideShow('but_0_2', 'unsee_check')"
+    >
+      Show Checks
+    </button>
+    <!-- ========================================================================  -->
+
+    <br /><br />
+
+    <!-- Beginning of Condition 1  -->
+    <em>
+      <li>Totally no idea about how to start?</li>
+      <!-- Define Buttons here -->
+      <div class="unsee_hint">
+        <button id="but_1_1" class="shbt" onclick="hint_show(1)">Hint</button>
+      </div>
+
+      <div class="unsee_check">
+        <button id="but_1_2" class="shbt" onclick="check_show(1)">Check</button>
+      </div>
+    </em>
+
+    <div class="plain_container" id="1">
+      <div id="hint_1" class="unsee_hint_child">
+        <em>
+          <!--Complete Hint 1 Here-->
+          First, you can set up an initial framework, which includes the given
+          information and the final derivation.
+        </em>
+      </div>
+
+      <div id="check_1" class="unsee_check_child">
+        <em>
+          <!--Complete Check 1 Here-->
+          $ \begin{array}{ll} 1.\large|&A \rightarrow (C \rightarrow B) &
+          ~\textup{given}\\ \hline 2.\large|&C& ~\textup{given}\\ \hline
+          &\textup{...} \\ \hline .. \large|& A \rightarrow B& \textup{...}\\
+          \hline \end{array} $
+          <br />
+          <br />
+          So, in the first few lines you see the given formulas on
+          <i> separate </i> lines.
+          <br />
+          The final line has the solution.
+          <br />
+          Note that we don't know how many lines the rest will occupy!
+        </em>
+      </div>
+    </div>
+    <!-- End of Condition 1  -->
+
+    <br />
+
+    <!-- Beginning of Condition 2  -->
+    <em>
+      <li>
+        Known that OR rule should be applied, but lost your goal when using OR
+        rule?
+      </li>
+      <!-- Define Buttons here -->
+      <div class="unsee_hint">
+        <button id="but_2_1" class="shbt" onclick="hint_show(2)">Hint</button>
+      </div>
+
+      <div class="unsee_check">
+        <button id="but_2_2" class="shbt" onclick="check_show(2)">Check</button>
+      </div>
+    </em>
+
+    <div class="plain_container" id="2">
+      <div id="hint_2" class="unsee_hint_child">
+        <em>
+          <!--Complete Hint 2 Here-->
+          From the final derivation, it is evident that B follows if A is given.
+          <br />
+          However, A is not given. Hence, to arrive at the final conclusion, the
+          assumption of A is necessary. Besides, at the last line,
+          $I_{\rightarrow}$ should be applied.
+        </em>
+      </div>
+
+      <div id="check_2" class="unsee_check_child">
+        <em>
+          <!--Complete Check 2 Here-->
+          \[ \begin{array}{ll} 1.\large|&A \rightarrow (C \rightarrow B) &
+          ~\textup{given}\\ \hline 2.\large|&C& ~\textup{given}\\ \hline
+          3.~~\large|&A & ~\textup{assume}\\ \hline &\textup{...}\\ \hline ..
+          \large|& A \rightarrow B& \textup{$I_{\rightarrow}(3,...)$}\\ \hline
+          \end{array} \]
+        </em>
+      </div>
+    </div>
+    <!-- End of Condition 2  -->
+
+    <br />
+
+    <!-- Beginning of Condition 3  -->
+    <em>
+      <li>
+        Unable to go on after correctly finishing line 3(which is in Hint 2)?
+      </li>
+      <!-- Define Buttons here -->
+      <div class="unsee_hint">
+        <button id="but_3_1" class="shbt" onclick="hint_show(3)">Hint</button>
+      </div>
+
+      <div class="unsee_check">
+        <button id="but_3_2" class="shbt" onclick="check_show(3)">Check</button>
+      </div>
+    </em>
+
+    <div class="plain_container" id="3">
+      <div id="hint_3" class="unsee_hint_child">
+        <em>
+          <!--Complete Hint 3 Here-->
+          To move on, it's essential to have a clear objective. Given the task
+          of deriving B with A as a given condition, the second-to-last line
+          should be B.
+          <br />
+          Besides, according to the first three lines, only lines 1 and 3 can be
+          applied by the rules that you have learned.
+        </em>
+      </div>
+
+      <div id="check_3" class="unsee_check_child">
+        <em>
+          <!--Complete Check 3 Here-->
+          \[ \begin{array}{ll} 1.\large|&A \rightarrow (C \rightarrow B) &
+          ~\textup{given}\\ \hline 2.\large|&C& ~\textup{given}\\ \hline
+          3.~~~~\large|&A & ~\textup{assume}\\ \hline 4.~~~~\large|&C
+          \rightarrow B& E_{\rightarrow}(1,3)\\ \hline 5.~~~~\large|&B&
+          ~\textup{...}\\ \hline 6. \large|& A \rightarrow B&
+          I_{\rightarrow}(3,5)\\ \hline \end{array} \]
+        </em>
+      </div>
+    </div>
+    <!-- End of Condition 3  -->
+
+    <!-- If you want to add more hints & checks, 
+      just copy one block of previous codes and 
+      change the corresponding number(i.e., 1,2,3,4,5...)  -->
+
+    <script src="../JsFiles/index.js"></script>
+  </body>
+</html>
